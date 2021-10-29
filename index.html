@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Los</title>
+    <link rel="stylesheet" href="style.css" /> 
+  </head>
+<body onload="defaultImage()">    <!-- for Image On Carousel -->
+    <div class="container">
+      <div class="mainContent">
+        <img class="img" src="bgLos.jpg" alt="LOSANGELES_MOUNTAINS " />
+        <img id="logo" src="logo.jpg" alt="" />
+        <nav id="nav">
+          <a href="#history">01.HISTORY</a>
+          <a href="#team">02.TEAM</a>
+        </nav>
+      </div>
+      <div class="navSticky" >
+        <img src="logo.jpg" alt="" />
+        <span class="text">
+          <span> LOSANGELES </span> <br />
+          <span id="MOUNTAINS">MOUNTAINS</span>
+        </span>
+        <nav>
+          <a href="#history">01.HISTORY</a>
+          <a href="#team">02.TEAM</a>
+        </nav>
+      </div>
+      <div class="history">
+          <img src="bg2.jpg" class="img" alt="">
+     <div class="content "  id="history">
+
+         <p class="num">01.</p>
+        <span class="word">HISTORY</span>
+        
+    </p>
+    <p class="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rem officia, at eligendi architecto reprehenderit molestiasvitae aliquam? Unde, accusantium. Lorem ipsum dolor sit amet consectetur usantium. Lorem ipsum dolor sit amet consectetur .  
+    </p>
+</div>
+    </div>
+        <div class="Carousel">
+            <div id="slideButtons">
+                <input type="radio" name="slide"  value="img1" checked  onclick="return show()" >
+                <input type="radio" name="slide"  value="img2" onclick="return show()">
+                <input type="radio" name="slide" value="img3"  onclick="return show()">
+                <input type="radio" name="slide" value="img4"  onclick="return show()">
+            </div>
+           
+          
+         <img src="" id="slide" alt="">
+         
+         
+        </div>
+       
+      <div class="Climb" id="team">
+        <span class="num">02.</span>
+        <span class="word">CLIMB</span>
+        <p>Cras scelerisque id quam sedid quam sed dignissim Pellentesque
+            dignissim 
+            Pellentesque urna nundignissim Pellentesque urna nunc</p>
+      </div>
+      <div class="tabs">
+        <nav>
+          <a  id="tab1" onclick="return showimg()"  >MOUNTAINS 1</a>
+          <a  id="tab2" onclick="return showimg2()"  >MOUNTAINS 2</a>
+        </nav>
+      </div>
+      <div class="tabContent">
+          <div class="schedule">
+              <h5>SCHEDULE</h5>
+              <span class="date">
+                  25Nov2016
+              </span>
+              <span class="activity">
+             Vestibulum viverra 
+              </span> <br><br>
+              <span class="date">
+                28Nov2016
+            </span>
+            <span class="activity">
+           Vestibulum viverra 
+            </span>
+            <br><br><br>
+              <span class="date">
+                18Dec2016
+            </span>
+            <span class="activity">
+           Vestibulum viverra 
+            </span>
+            <br><br>
+              <span class="date">
+              07Jan2017
+            </span>
+            <span class="activity">
+           Vestibulum viverra 
+            </span>
+          </div>
+        <img id="MOUNTAINS1"  class="img" src="final img.jpg" alt="" />
+        <img id="MOUNTAINS2" class="img" src="final img2.jpg" alt="" />
+      </div>
+    </div>
+    <footer class="ftr">
+        <img src="logo.jpg" alt="" />
+        <span class="text">
+            <span> LOSANGELES </span> <br />
+            <span id="MOUNTAINS">MOUNTAINS</span>
+          </span>
+
+      <blockquote>COPYRIGHT 2016. ALL RIGHTS RESERVED.</blockquote>
+    </footer>
+  </body>
+                                     <!-- JAVASCRIPT -->
+  <script>
+      let Mountains1=document.getElementById("MOUNTAINS1")
+      let Mountains2=document.getElementById("MOUNTAINS2")
+    function showimg(){
+        Mountains1.style.display="block";
+        Mountains2.style.display="none";    
+       }
+       function showimg2(){
+        Mountains1.style.display="none";
+        Mountains2.style.display="block";      
+       }
+       let slideImages=["cas1.jpg","cas12.jpg","cas1.jpg","cas12.jpg"]
+       let slide=document.getElementsByName("slide");
+       let images=document.getElementById("slide");
+       //First Image Default
+      function defaultImage(){
+        images.src=slideImages[0];  
+      }
+   
+       function show(){
+         for(let i=0 ;i<slide.length;i++){
+         console.log(slide[i].value);
+         if(slide[i].checked)
+         images.src=slideImages[i];    
+       }}
+     
+  </script>
+</html>
